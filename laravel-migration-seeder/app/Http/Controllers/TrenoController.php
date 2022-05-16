@@ -14,7 +14,7 @@ class TrenoController extends Controller
      */
     public function index()
     {   
-        $trenis = Treno::all();
+        $trenis = Treno::paginate(12);
         return view('trains.index', ['trenis'=> $trenis]);
     }
   
