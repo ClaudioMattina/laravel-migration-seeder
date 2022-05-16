@@ -13,8 +13,9 @@ class TrenoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {   
+        $trenis = Treno::all();
+        return view('trains.index', ['trenis'=> $trenis]);
     }
   
     /**
